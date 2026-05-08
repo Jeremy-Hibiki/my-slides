@@ -1,1 +1,1 @@
-node_modules/@slidev/client/uno.config.ts
+export * from '@slidev/client/uno.config.ts';
