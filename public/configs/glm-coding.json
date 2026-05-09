@@ -16,13 +16,7 @@
     "DISABLE_COST_WARNINGS": "1"
   },
   "permissions": {
-    "allow": [
-      "Bash(tree:*)",
-      "Bash(ls:*)",
-      "Bash(ruff check:*)",
-      "Skill(glm-plan-usage:usage-query:*)",
-      "Bash(uv sync:*)"
-    ],
+    "allow": ["Bash(tree:*)", "Bash(ls:*)", "Bash(ruff check:*)", "Skill(glm-plan-usage:usage-query:*)", "Bash(uv:*)"],
     "deny": [
       "Read(.env*)",
       "Edit(.env*)",
@@ -37,7 +31,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "vpx ccstatusline@latest",
+    "command": "npx -y ccstatusline@latest",
     "padding": 0
   },
   "enabledPlugins": {
@@ -48,9 +42,5 @@
   },
   "language": "简体中文, Chinese",
   "awaySummaryEnabled": false,
-  "skipDangerousModePermissionPrompt": true,
-  "teammateMode": "tmux",
-  "teammateDefaultModel": "glm-5.1",
-  "verbose": true,
-  "preferredNotifChannel": "kitty"
+  "skipDangerousModePermissionPrompt": true
 }

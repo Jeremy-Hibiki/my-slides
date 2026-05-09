@@ -32,5 +32,7 @@
   "editor.formatOnSaveMode": "file",
   "editor.codeActionsOnSave": {
     "source.fixAll.oxc": "explicit"
-  }
+  },
+  "slidev.include": ["**/slides.md", "slides/*.md"],
+  "slidev.force-enabled": true
 }
