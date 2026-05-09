@@ -339,11 +339,11 @@ CLI 参数              ← claude --model ...
 
 在终端底部显示实时状态栏：模型、费用、上下文用量等
 
-![Statusline {width=1280}](./imgs/statusline.png)
+![Statusline](./imgs/statusline.png){width=800px}
 
 建议执行 `npx -y ccstatusline@latest`, 进行交互式配置、安装
 
-![ccstatusline](./imgs/ccstatusline.png)
+![ccstatusline](./imgs/ccstatusline.png){width=800px}
 
 
 ---
