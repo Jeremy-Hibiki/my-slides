@@ -6,40 +6,27 @@ import { execa } from 'execa';
 import prompts from 'prompts';
 
 async function startPicker(args: string[]) {
-  const folders = await Promise.all(
-    (await fs.readdir(new URL('..', import.meta.url), { withFileTypes: true }))
-      .filter((dirent) => dirent.isDirectory())
-      .map((dirent) => dirent.name)
-      // .filter((folder) => folder.match(/^\d{4}-/))
-      .sort((a, b) => -a.localeCompare(b))
-      .map(async (folder) => {
-        const md = await fs.readFile(new URL(`../${folder}/README.md`, import.meta.url), 'utf-8');
-        const title = md.match(/^# (.*)/)?.[1].trim() || '';
-        return {
-          title: title ? `${folder} | ${title}` : folder,
-          value: folder,
-        } as const;
-      }),
-  );
+  const slides = (await fs.readdir(new URL('../slides', import.meta.url), { withFileTypes: true }))
+    .filter((dirent) => {
+      return dirent.isFile() && dirent.name.endsWith('.md');
+    })
+    .map((dirent) => dirent.name)
+    .map((slide) => ({
+      title: slide,
+      value: slide,
+    }));
 
-  const result = args.includes('-y')
-    ? { folder: folders[0] }
-    : await prompts([
-        {
-          type: 'select',
-          name: 'folder',
-          message: 'Pick a folder',
-          choices: folders,
-        },
-      ]);
+  const result = await prompts({
+    type: 'select',
+    name: 'slide',
+    message: 'Pick a slide',
+    choices: slides,
+  });
 
   args = args.filter((arg) => arg !== '-y');
 
-  if (result.folder) {
-    if (args[0] === 'dev')
-      execa('cursor', [fileURLToPath(new URL(`../${result.folder}/src/slides.md`, import.meta.url))]);
-    await execa('vp', ['run', ...args], {
-      cwd: new URL(`../${result.folder}/src`, import.meta.url),
+  if (result.slide) {
+    void execa('vp', ['exec', 'slidev', fileURLToPath(new URL(`../slides/${result.slide}`, import.meta.url))], {
       stdio: 'inherit',
     });
   }

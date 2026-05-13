@@ -31,15 +31,6 @@ importers:
       '@slidev/theme-default':
         specifier: latest
         version: 0.25.0
-      '@wterm/dom':
-        specifier: ^0.3.0
-        version: 0.3.0
-      '@wterm/ghostty':
-        specifier: ^0.3.0
-        version: 0.3.0
-      '@wterm/vue':
-        specifier: ^0.3.0
-        version: 0.3.0(@wterm/dom@0.3.0)(vue@3.5.34(typescript@6.0.3))
       vue:
         specifier: ^3.5.34
         version: 3.5.34(typescript@6.0.3)
@@ -1603,21 +1594,6 @@ packages:
     resolution: {integrity: sha512-bZpge9eSXwa4ToSiqJ7j6KRwhAsneMFoSz3LMWKQDkqimm3D/tbFlrklrs/IOqC8tEcYmXQZJ6N0UrjhBirVCg==}
     peerDependencies:
       vue: ^3.5.0
-
-  '@wterm/core@0.3.0':
-    resolution: {integrity: sha512-aQ73QBP+eyA3kcn31mA7DmAi7qmEsQijZdmvgwxtSjCi2248EAOZgtkGDpjlspfrxyVxQbUl/IF+gCVcXt4nZQ==}
-
-  '@wterm/dom@0.3.0':
-    resolution: {integrity: sha512-OiUl7reGSlW02yb5wGXMplMZhW2HBkBSFxvbFj15I832UK0QFIHRvhE2l6Xgae8ROn9bNLaALoKDFvcUuz80iQ==}
-
-  '@wterm/ghostty@0.3.0':
-    resolution: {integrity: sha512-TDjEmUSRD7IaFxq31P7+I3Inkp5mHCfBfO6LYj3/vbLbWOkOZOKPhjAcZ36AYFHe9Q0HLCFvLWmrxIO3aGCjDA==}
-
-  '@wterm/vue@0.3.0':
-    resolution: {integrity: sha512-uZ4QrccbIrW9hcs//QEgdVVz6k3W7oh2/AgTXYHyO5eIwz2Bpm4XEGVUlWdixeHvDbkIezb26jWJywkit2zzQQ==}
-    peerDependencies:
-      '@wterm/dom': 0.3.0
-      vue: ^3.4.0
 
   acorn@8.16.0:
     resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
@@ -5176,21 +5152,6 @@ snapshots:
 
   '@vueuse/shared@14.3.0(vue@3.5.34(typescript@6.0.3))':
     dependencies:
-      vue: 3.5.34(typescript@6.0.3)
-
-  '@wterm/core@0.3.0': {}
-
-  '@wterm/dom@0.3.0':
-    dependencies:
-      '@wterm/core': 0.3.0
-
-  '@wterm/ghostty@0.3.0':
-    dependencies:
-      '@wterm/core': 0.3.0
-
-  '@wterm/vue@0.3.0(@wterm/dom@0.3.0)(vue@3.5.34(typescript@6.0.3))':
-    dependencies:
-      '@wterm/dom': 0.3.0
       vue: 3.5.34(typescript@6.0.3)
 
   acorn@8.16.0: {}
