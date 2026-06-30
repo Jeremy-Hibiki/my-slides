@@ -14,6 +14,11 @@ declare module 'vite-plus' {
 }
 
 export default defineConfig({
+  server: {
+    fs: {
+      allow: ['*'],
+    },
+  },
   slidev: {},
   staged: {
     '*': 'vp check --fix',

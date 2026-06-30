@@ -26,9 +26,19 @@ async function startPicker(args: string[]) {
   args = args.filter((arg) => arg !== '-y');
 
   if (result.slide) {
-    void execa('vp', ['exec', 'slidev', fileURLToPath(new URL(`../slides/${result.slide}`, import.meta.url))], {
-      stdio: 'inherit',
-    });
+    if (args[0] === 'dev')
+      void execa('vp', ['exec', 'slidev', fileURLToPath(new URL(`../slides/${result.slide}`, import.meta.url))], {
+        stdio: 'inherit',
+      });
+    else if (args[0] === 'build') {
+      void execa(
+        'vp',
+        ['exec', 'slidev', 'build', fileURLToPath(new URL(`../slides/${result.slide}`, import.meta.url))],
+        {
+          stdio: 'inherit',
+        },
+      );
+    }
   }
 }
 

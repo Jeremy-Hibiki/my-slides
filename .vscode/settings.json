@@ -33,6 +33,12 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.oxc": "explicit"
   },
-  "slidev.include": ["**/slides.md", "slides/*.md"],
-  "slidev.force-enabled": true
+  "slidev.include": [
+    "**/slides.md",
+    "slides/*.md"
+  ],
+  "slidev.force-enabled": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  }
 }

@@ -1,8 +1,7 @@
 ---
 theme: default
-title: Claude Code 深度指南（Intro）
+title: Claude Code 进阶指南（BI 组内）
 canvasWidth: 1400
-info: 软件开发向 · 配置 / CLI / MCP / 进阶 — 配合《Claude Code 101》使用
 # class: text-center
 transition: view-transition
 comark: true
@@ -15,7 +14,7 @@ fonts:
 hideInToc: true
 ---
 
-# Claude Code 深度指南
+# Claude Code 进阶指南
 
 ## Intro · 配置与进阶参考（偏软件开发）
 

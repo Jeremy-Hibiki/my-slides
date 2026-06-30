@@ -1,0 +1,15 @@
+.slidev-layout {
+  h2,
+  h3 {
+    --uno: my-3 font-black;
+  }
+
+  b,
+  strong {
+    --uno: font-black text-orange-700;
+  }
+
+  &.two-cols-header {
+    --uno: gap-row-4 gap-col-8;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "unplugin-fonts/client"
+    ]
+  },
+  "exclude": [
+    "**/*.md",
+    "**/dist-stale/**",
+    "**/dist/**"
+  ]
+}

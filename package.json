@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "slidev build",
+    "build": "tsx scripts/picker.ts build",
     "dev": "tsx scripts/picker.ts dev",
+    "start": "serve ./slides/dist",
     "format": "vp fmt",
     "lint": "vp lint",
     "lint:fix": "vp lint --fix",
@@ -12,20 +13,23 @@
     "prepare": "vp config"
   },
   "dependencies": {
-    "@slidev/cli": "^52.15.1",
+    "@slidev/cli": "^52.16.0",
     "@slidev/theme-apple-basic": "^0.25.1",
     "@slidev/theme-default": "latest",
-    "vue": "^3.5.34"
+    "vue": "^3.5.39"
   },
   "devDependencies": {
     "@types/prompts": "^2.4.9",
     "execa": "^9.6.1",
-    "playwright-chromium": "^1.59.1",
+    "playwright-chromium": "^1.61.1",
     "prompts": "^2.4.2",
-    "tsx": "^4.21.0",
+    "serve": "^14.2.6",
+    "tsx": "^4.22.4",
     "typescript": "^6.0.3",
-    "unocss": "^66.6.8",
+    "unocss": "^66.7.4",
+    "unplugin-fonts": "^2.0.0",
+    "vite": "catalog:",
     "vite-plus": "catalog:"
   },
-  "packageManager": "pnpm@11.1.1"
+  "packageManager": "pnpm@11.9.0"
 }

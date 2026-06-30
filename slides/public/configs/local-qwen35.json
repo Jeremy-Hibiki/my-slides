@@ -1,0 +1,33 @@
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "no-key",
+    "ANTHROPIC_BASE_URL": "http://192.168.131.119:8002",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "Qwen3.5-35B-A3B",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "Qwen3.5-35B-A3B",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "Qwen3.5-35B-A3B",
+    "ANTHROPIC_MODEL": "Qwen3.5-35B-A3B",
+    "API_TIMEOUT_MS": "3000000",
+    "ENABLE_LSP_TOOL": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_NO_FLICKER": "1",
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_COST_WARNINGS": "1"
+  },
+  "permissions": {
+    "allow": ["Bash(tree:*)", "Bash(ls:*)"],
+    "deny": [
+      "Read(.env*)",
+      "Edit(.env*)",
+      "Bash(cat *.env*)",
+      "Bash(head *.env*)",
+      "Bash(tail *.env*)",
+      "Bash(less *.env*)",
+      "Bash(more *.env*)",
+      "Read(**/__pycache__)"
+    ],
+    "defaultMode": "acceptEdits"
+  },
+  "language": "简体中文, Chinese"
+}
